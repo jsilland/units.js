@@ -1,0 +1,226 @@
+{
+    "long_distance": {
+        "imperial": {
+            "long": {
+                "one": "{value} mile",
+                "other": "{value} miles"
+            },
+            "long_name": "Miles",
+            "short": "{value}mi",
+            "short_name": "mi"
+        },
+        "metric": {
+            "long": {
+                "one": "{value} kilometer",
+                "other": "{value} kilometers"
+            },
+            "long_name": "Kilometers",
+            "short": "{value}km",
+            "short_name": "km"
+        }
+    },
+    "power": [
+        {
+            "long": {
+                "one": "{value} Watt",
+                "other": "{value} Watts"
+            },
+            "long_name": "Watts",
+            "short": "{value}W",
+            "short_name": "W"
+        },
+        {
+            "long": {
+                "one": "{value} KiloWatt",
+                "other": "{value} KiloWatts"
+            },
+            "long_name": "KiloWatts",
+            "short": "{value}kW",
+            "short_name": "kW"
+        },
+        {
+            "long": {
+                "one": "{value} MegaWatt",
+                "other": "{value} MegaWatts"
+            },
+            "long_name": "MegaWatts",
+            "short": "{value}MW",
+            "short_name": "MW"
+        },
+        {
+            "long": {
+                "one": "{value} GigaWatt",
+                "other": "{value} GigaWatts"
+            },
+            "long_name": "GigaWatts",
+            "short": "{value}GW",
+            "short_name": "GW"
+        },
+        {
+            "long": {
+                "one": "{value} TeraWatt",
+                "other": "{value} TeraWatts"
+            },
+            "long_name": "TeraWatts",
+            "short": "{value}TW",
+            "short_name": "TW"
+        },
+        {
+            "long": {
+                "one": "{value} PicoWatt",
+                "other": "{value} PicoWatts"
+            },
+            "long_name": "PicoWatts",
+            "short": "{value}pW",
+            "short_name": "pW"
+        },
+        {
+            "long": {
+                "one": "{value} NanoWatt",
+                "other": "{value} NanoWatts"
+            },
+            "long_name": "NanoWatts",
+            "short": "{value}nW",
+            "short_name": "nW"
+        },
+        {
+            "long": {
+                "one": "{value} MicroWatt",
+                "other": "{value} MicroWatts"
+            },
+            "long_name": "MicroWatts",
+            "short": "{value}µW",
+            "short_name": "µW"
+        },
+        {
+            "long": {
+                "one": "{value} MilliWatt",
+                "other": "{value} MilliWatts"
+            },
+            "long_name": "MilliWatts",
+            "short": "{value}mW",
+            "short_name": "mW"
+        }
+    ],
+    "bytes": [
+        {
+            "long": {
+                "one": "{value} byte",
+                "other": "{value} bytes"
+            },
+            "long_name": "Bytes",
+            "short": "{value}B",
+            "short_name": "B"
+        },
+        {
+            "long": {
+                "one": "{value} Kilobyte",
+                "other": "{value} Kilobytes"
+            },
+            "long_name": "Kilobytes",
+            "short": "{value}KB",
+            "short_name": "KB"
+        },
+        {
+            "long": {
+                "one": "{value} Megabyte",
+                "other": "{value} Megabytes"
+            },
+            "long_name": "Megabytes",
+            "short": "{value}MB",
+            "short_name": "MB"
+        },
+        {
+            "long": {
+                "one": "{value} Gigabyte",
+                "other": "{value} Gigabytes"
+            },
+            "long_name": "Gigabytes",
+            "short": "{value}GB",
+            "short_name": "GB"
+        },
+        {
+            "long": {
+                "one": "{value} Terabyte",
+                "other": "{value} Terabytes"
+            },
+            "long_name": "Terabytes",
+            "short": "{value}TB",
+            "short_name": "TB"
+        },
+        {
+            "long": {
+                "one": "{value} Petabyte",
+                "other": "{value} Petabytes"
+            },
+            "long_name": "Petabytes",
+            "short": "{value}PB",
+            "short_name": "PB"
+        },
+        {
+            "long": {
+                "one": "{value} Exabyte",
+                "other": "{value} Exabytes"
+            },
+            "long_name": "Exabytes",
+            "short": "{value}EB",
+            "short_name": "EB"
+        }
+    ],
+    "distance": [
+        {
+            "long": {
+                "one": "{value} meter",
+                "other": "{value} meters"
+            },
+            "long_name": "Meters",
+            "short": "{value}m",
+            "short_name": "m"
+        },
+        {
+            "long": {
+                "one": "{value} kilometer",
+                "other": "{value} kilometers"
+            },
+            "long_name": "Kilometers",
+            "short": "{value}km",
+            "short_name": "km"
+        },
+        {
+            "long": {
+                "one": "{value} picometer",
+                "other": "{value} picometers"
+            },
+            "long_name": "Picometers",
+            "short": "{value}pm",
+            "short_name": "pm"
+        },
+        {
+            "long": {
+                "one": "{value} nanometer",
+                "other": "{value} nanometers"
+            },
+            "long_name": "Nanometers",
+            "short": "{value}nm",
+            "short_name": "nm"
+        },
+        {
+            "long": {
+                "one": "{value} micrometers",
+                "other": "{value} micrometers"
+            },
+            "long_name": "Micrometers",
+            "short": "{value}µm",
+            "short_name": "µm"
+        },
+        {
+            "long": {
+                "one": "{value} millimeter",
+                "other": "{value} millimeters"
+            },
+            "long_name": "Millimeters",
+            "short": "{value}mm",
+            "short_name": "mm"
+        }
+    ]
+}
