@@ -11,12 +11,8 @@ module.exports = (grunt) ->
         src: ['*.coffee'],
         dest: 'test',
         ext: '.js'
-#    uglify:
-#      dist:
-#        'dist/units.en.min.js': 'dist/units.en.js'
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
-  #grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
 
   grunt.registerTask('compile', () ->
