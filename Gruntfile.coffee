@@ -11,14 +11,23 @@ module.exports = (grunt) ->
         src: ['*.coffee'],
         dest: 'test',
         ext: '.js'
+    codo:
+      options:
+        name: 'Units.js'
+        title: 'Units.js API Documentation'
+        extra: [ 'LICENSE-MIT' ]
+        undocumented: yes
+        stats: no
+      src: ['lib/units']
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
+  grunt.loadNpmTasks('grunt-codo')
 
   grunt.registerTask('compile', () ->
     for locale in ['en']
       data =
-        translations: JSON.stringify(grunt.file.readJSON("locales/#{locale}.json"))
+        translations: JSON.stringify(grunt.file.readYAML("locales/#{locale}.yml")[locale])
       translations = grunt.template.process(
             'Units.Translations = <%= translations %>', data: data)
       translationsFile = "build/locales/#{locale}.coffee"

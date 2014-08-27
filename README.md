@@ -1,53 +1,28 @@
 # units.js
 
-Javascript library for units conversion and internationalization
+units.js is a Javascript library meant to format quantities that have units,
+such as distances, weights, force, energy, power… It uses
+(TwitterCldr)[https://github.com/twitter/twitter-cldr-js] to perform the
+formatting of numbers in an i18n-safe fashion.
 
-## Getting Started
-### On the server
-Install the module with: `npm install units.js`
-
-```javascript
-var units_js = require('units.js');
-units_js.awesome(); // "awesome"
-```
-
-### In the browser
-Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.github.com/jsilland/units.js/master/dist/units.js.min.js
-[max]: https://raw.github.com/jsilland/units.js/master/dist/units.js.js
-
-In your web page:
-
-```html
-<script src="dist/units.js.min.js"></script>
-<script>
-awesome(); // "awesome"
-</script>
-```
-
-In your code, you can attach units.js's methods to any object.
-
-```html
-<script>
-var exports = Bocoup.utils;
-</script>
-<script src="dist/units.js.min.js"></script>
-<script>
-Bocoup.utils.awesome(); // "awesome"
-</script>
-```
+Just don't use it now, it's not ready yet.
 
 ## Documentation
-_(Coming soon)_
+
+The documentation for units.js is available (here)[http://soliton.io/units.js/doc]
 
 ## Examples
 _(Coming soon)_
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+### Translations
 
-_Also, please don't edit files in the "dist" subdirectory as they are generated via Grunt. You'll find source code in the "lib" subdirectory!_
+The translations for units.js are stored on (Transifex)[http://www.transifex.com],
+a platform enabling the coordination of translation teams, which is free for OSS
+software.
+
+If you wish to contribute translations for this project, (create an account)[https://www.transifex.com/signup/]
+and then (open an issue)[https://github.com/jsilland/units.js/issues/new]
+asking for access to the project.
 
 ## Release History
 _(Nothing yet)_

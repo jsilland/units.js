@@ -5,20 +5,16 @@
 # When presented a value, formatters of this class will determine the best sub-
 # or super-unit to use, then convert the value and format it appropriately.
 #
-# Translations for scaling formatters are required to be stored as an array
-# under the root translation key. The first element of the array defines the
-# translations for the unit, the second for the `unit * multipllier**1`, etc…
-# Translations for sub-units are stored in the same array, with the smallest
-# sub-unit defined right after the biggest super-unit. For instance, here are
-# the structure of the translation array for a distance formatter ranging from
-# micrometers to kilometers, with a multiplier of 1000:
+# Translations for scaling formatters are stored as an object under the root
+# translation key. Each property refers to the translations for one step of the
+# scale, and the name of the property is that of the step it represents:
 #
-# 'distance': [
-#   {...} // Translations for the main unit, e.g. meters
-#   {...} // kilometers
-#   {...} // micrometers
-#   {...} // millimeters
-# ]
+# 'distance': {
+#   'ONE': {...} // Translations for the main unit, e.g. meters
+#   'KILO': {...} // kilometers
+#   'MEGA': {...} // micrometers
+#   'MILLI': {...} // millimeters
+# }
 class Units.ScalingFormatter
 
   @PICO: -4
@@ -33,19 +29,33 @@ class Units.ScalingFormatter
   @PETA: 5
   @EXA: 6
   @ZETTA: 7
+  
+  PREFIXES:
+    '-4': 'PICO'
+    '-3': 'NANO'
+    '-2': 'MICRO'
+    '-1': 'MILLI'
+    '0': 'ONE'
+    '1': 'KILO'
+    '2': 'MEGA'
+    '3': 'GIGA'
+    '4': 'TERA'
+    '5': 'PETA'
+    '6': 'EXA'
+    '7': 'ZETTA'
 
   # Constructs a new scaling formatter
   #
   # @param [String] key the key under which the translations for this
-  #     formatter are stored
+  # formatter are stored
   # @param [Number] precision the precision with which to format the values
-  #     passed to this formatter
-  # @param [Object] an implementation of CLDR
+  # passed to this formatter
+  # @param [Object] cldr an implementation of CLDR
   # @param [Number] multiplier the scaling factor to use for converting values
-  # @minIndex [Number] the minimum significant power of the multiplier
-  #     representable by this formatter
-  # @maxIndex [Number] the maximum significant power of the multiplier
-  #     representable by this formatter
+  # @param [Number] minIndex the minimum significant power of the multiplier
+  # representable by this formatter
+  # @param [Number] maxIndex the maximum significant power of the multiplier
+  # representable by this formatter
   constructor: (@key, @precision, @cldr, @multiplier, @minIndex, @maxIndex) ->
 
   # Converts the value to the proper scale, as per the configuration of this
@@ -63,42 +73,64 @@ class Units.ScalingFormatter
   # Formats a value into a string, at a given precision
   #
   # @param [Number] value the value to format
-  # @param [Number] precision the decimal precision to use, defaults to the
-  #     precision passed in the constructor
+  # @param [Number] precision the decimal precision to use
   format: (value, precision=@precision) ->
+    precision = @computePrecision(value, precision)
     new @cldr.DecimalFormatter().format(value, precision: precision)
 
+  # @private
+  computePrecision: (value, precision) ->
+    if precision == 0
+      precision
+
+    decimalPart = Math.abs(value - Math.round(value))
+    if decimalPart == 0
+      # Number is an integer – we should not display anything after the
+      # decimal point
+      0
+    else
+      # Let's see if there is a non-zero digit in the value's
+      # decimal part that is before the desired precision
+      log = Math.log(decimalPart) / Math.LN10
+      firstSignificantIndex = Math.round(Math.abs(log))
+      if firstSignificantIndex > precision
+        0 
+      else
+        precision
+
+  # @private
   translationKey: (value, name) ->
     unitTranslations = Units.Translations[@key]
     index = @computeIndex(value)
-    index = unitTranslations.length + index if index < 0
-    unitTranslations[index][name]
+    prefix = @PREFIXES[index]
+    unitTranslations[prefix][name]
 
+  # @private
   longKey: (value) ->
     @translationKey(value, 'long')
 
   # Formats a value and include the full unit name.
   #
   # @param [Number] value the value to format
-  # @param [Number] precision the decimal precision to use defaults to the
-  #     precision passed in the constructor
+  # @param [Number] precision the decimal precision to use
   formatLong: (value, precision=@precision) ->
     convertedValue = @convert(value)
     count = parseFloat(convertedValue.toFixed(precision))
     Units.MessageFormatter.format(@longKey(value), value: @format(convertedValue, precision), count: count, @cldr)
 
+  # @private
   shortKey: (value) ->
     @translationKey(value, 'short')
 
   # Formats a value and include the abbreviated unit name.
   #
   # @param [Number] value the value to format
-  # @param [Number] precision the decimal precision to use defaults to the
-  #     precision passed in the constructor
+  # @param [Number] precision the decimal precision to use
   formatShort: (value, precision=@precision) ->
     convertedValue = @convert(value)
     Units.MessageFormatter.format(@shortKey(value), value: @format(convertedValue, precision), @cldr)
 
+  # @private
   longUnitKey: (value) ->
     @translationKey(value, 'long_name')
 
@@ -108,6 +140,7 @@ class Units.ScalingFormatter
   unitLong: (value) ->
     Units.MessageFormatter.format(@longUnitKey(value))
 
+  # @private
   shortUnitKey: (value) ->
     @translationKey(value, 'short_name')
 
