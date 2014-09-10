@@ -1,10 +1,10 @@
 TwitterCldr = require('twitter_cldr').load('en')
 Units = require('../dist/units.en')
 
-exports.DistanceFormatterTest =
+exports.MetersFormatterTest =
 
   'test can format short': (test) ->
-    formatter = new Units.DistanceFormatter(TwitterCldr)
+    formatter = new Units.MetersFormatter(TwitterCldr)
     test.equal(formatter.formatShort(0.000000000001), '1pm')
     test.equal(formatter.formatShort(0.000000001), '1nm')
     test.equal(formatter.formatShort(0.000001), '1µm')
@@ -17,7 +17,7 @@ exports.DistanceFormatterTest =
     test.done()
     
   'test can format long': (test) ->
-    formatter = new Units.DistanceFormatter(TwitterCldr)
+    formatter = new Units.MetersFormatter(TwitterCldr)
     test.equal(formatter.formatLong(0.000000000001), '1 picometer')
     test.equal(formatter.formatLong(0.000000001), '1 nanometer')
     test.equal(formatter.formatLong(0.000000002), '2 nanometers')

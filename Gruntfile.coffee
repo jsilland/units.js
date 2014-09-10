@@ -2,14 +2,14 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     nodeunit:
-      files: ['test/**/*Test.js']
+      files: ['build/**/*Test.js']
     pkg: grunt.file.readJSON('package.json')
     coffee:
       compileTests:
         expand: true,
         cwd: 'test',
         src: ['*.coffee'],
-        dest: 'test',
+        dest: 'build',
         ext: '.js'
     codo:
       options:
@@ -23,6 +23,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
   grunt.loadNpmTasks('grunt-codo')
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('compile', () ->
     for locale in ['en']
@@ -38,11 +39,17 @@ module.exports = (grunt) ->
         'lib/units.coffee'
         translationsFile
         'lib/units/MessageFormatter.coffee'
-        'lib/units/ScalarFormatter.coffee'
         'lib/units/ScalingFormatter.coffee'
         'lib/units/PowerFormatter.coffee'
         'lib/units/BytesFormatter.coffee'
-        'lib/units/DistanceFormatter.coffee'
+        'lib/units/distance/MetersFormatter.coffee'
+        'lib/units/distance/MilesFormatter.coffee'
+        'lib/units/distance/DistanceUnit.coffee'
+        'lib/units/distance/Feet.coffee'
+        'lib/units/distance/Inches.coffee'
+        'lib/units/distance/Meters.coffee'
+        'lib/units/distance/Miles.coffee'
+        'lib/units/distance/Yards.coffee'
         'lib/expose.coffee'
       ].map(grunt.file.read).join(grunt.util.linefeed)
 
@@ -52,7 +59,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask('uglify', () ->
     for locale in ['en']
-      result = require('uglify-js').minify("dist/units.#{locale}.js");
+      result = require('uglify-js').minify("dist/units.#{locale}.js", {mangle: true, compress: true});
       grunt.file.write("dist/units.#{locale}.min.js", result.code)
   )
 

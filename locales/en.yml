@@ -113,7 +113,23 @@ en:
       long_name: Exabytes
       short: "{value}EB"
       short_name: EB
-  distance:
+  miles:
+    ONE:
+      long:
+        one: "{value} mile"
+        other: "{value} miles"
+      long_name: Miles
+      short: "{value}mi"
+      short_name: mi
+  yards:
+    ONE:
+      long:
+        one: "{value} yard"
+        other: "{value} yards"
+      long_name: Yards
+      short: "{value}yds"
+      short_name: yds
+  meters:
     ONE:
       long:
         one: "{value} meter"
