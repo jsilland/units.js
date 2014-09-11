@@ -1,4 +1,121 @@
 en:
+  bytes:
+    ONE:
+      long:
+        one: "{value} byte"
+        other: "{value} bytes"
+      long_name: Bytes
+      short: "{value}B"
+      short_name: B
+    KILO:
+      long:
+        one: "{value} Kilobyte"
+        other: "{value} Kilobytes"
+      long_name: Kilobytes
+      short: "{value}KB"
+      short_name: KB
+    MEGA:
+      long:
+        one: "{value} Megabyte"
+        other: "{value} Megabytes"
+      long_name: Megabytes
+      short: "{value}MB"
+      short_name: MB
+    GIGA:
+      long:
+        one: "{value} Gigabyte"
+        other: "{value} Gigabytes"
+      long_name: Gigabytes
+      short: "{value}GB"
+      short_name: GB
+    TERA:
+      long:
+        one: "{value} Terabyte"
+        other: "{value} Terabytes"
+      long_name: Terabytes
+      short: "{value}TB"
+      short_name: TB
+    PETA:
+      long:
+        one: "{value} Petabyte"
+        other: "{value} Petabytes"
+      long_name: Petabytes
+      short: "{value}PB"
+      short_name: PB
+    EXA:
+      long:
+        one: "{value} Exabyte"
+        other: "{value} Exabytes"
+      long_name: Exabytes
+      short: "{value}EB"
+      short_name: EB
+  feet:
+    ONE:
+      long:
+        one: "{value} foot"
+        other: "{value} feet"
+      long_name: Feet
+      short: "{value}ft"
+      short_name: ft
+  inches:
+    ONE:
+      long:
+        one: "{value} inch"
+        other: "{value} inches"
+      long_name: Inches
+      short: '{value}"'
+      short_name: '\"'
+  miles:
+    ONE:
+      long:
+        one: "{value} mile"
+        other: "{value} miles"
+      long_name: Miles
+      short: "{value}mi"
+      short_name: mi
+  meters:
+    ONE:
+      long:
+        one: "{value} meter"
+        other: "{value} meters"
+      long_name: Meters
+      short: "{value}m"
+      short_name: m
+    KILO:
+      long:
+        one: "{value} kilometer"
+        other: "{value} kilometers"
+      long_name: Kilometers
+      short: "{value}km"
+      short_name: km
+    PICO:
+      long:
+        one: "{value} picometer"
+        other: "{value} picometers"
+      long_name: Picometers
+      short: "{value}pm"
+      short_name: pm
+    NANO:
+      long:
+        one: "{value} nanometer"
+        other: "{value} nanometers"
+      long_name: Nanometers
+      short: "{value}nm"
+      short_name: nm
+    MICRO:
+      long:
+        one: "{value} micrometer"
+        other: "{value} micrometers"
+      long_name: Micrometers
+      short: "{value}µm"
+      short_name: µm
+    MILLI:
+      long:
+        one: "{value} millimeter"
+        other: "{value} millimeters"
+      long_name: Millimeters
+      short: "{value}mm"
+      short_name: mm
   power:
     ONE:
       long:
@@ -63,64 +180,6 @@ en:
       long_name: MilliWatts
       short: "{value}mW"
       short_name: mW
-  bytes:
-    ONE:
-      long:
-        one: "{value} byte"
-        other: "{value} bytes"
-      long_name: Bytes
-      short: "{value}B"
-      short_name: B
-    KILO:
-      long:
-        one: "{value} Kilobyte"
-        other: "{value} Kilobytes"
-      long_name: Kilobytes
-      short: "{value}KB"
-      short_name: KB
-    MEGA:
-      long:
-        one: "{value} Megabyte"
-        other: "{value} Megabytes"
-      long_name: Megabytes
-      short: "{value}MB"
-      short_name: MB
-    GIGA:
-      long:
-        one: "{value} Gigabyte"
-        other: "{value} Gigabytes"
-      long_name: Gigabytes
-      short: "{value}GB"
-      short_name: GB
-    TERA:
-      long:
-        one: "{value} Terabyte"
-        other: "{value} Terabytes"
-      long_name: Terabytes
-      short: "{value}TB"
-      short_name: TB
-    PETA:
-      long:
-        one: "{value} Petabyte"
-        other: "{value} Petabytes"
-      long_name: Petabytes
-      short: "{value}PB"
-      short_name: PB
-    EXA:
-      long:
-        one: "{value} Exabyte"
-        other: "{value} Exabytes"
-      long_name: Exabytes
-      short: "{value}EB"
-      short_name: EB
-  miles:
-    ONE:
-      long:
-        one: "{value} mile"
-        other: "{value} miles"
-      long_name: Miles
-      short: "{value}mi"
-      short_name: mi
   yards:
     ONE:
       long:
@@ -129,46 +188,3 @@ en:
       long_name: Yards
       short: "{value}yds"
       short_name: yds
-  meters:
-    ONE:
-      long:
-        one: "{value} meter"
-        other: "{value} meters"
-      long_name: Meters
-      short: "{value}m"
-      short_name: m
-    KILO:
-      long:
-        one: "{value} kilometer"
-        other: "{value} kilometers"
-      long_name: Kilometers
-      short: "{value}km"
-      short_name: km
-    PICO:
-      long:
-        one: "{value} picometer"
-        other: "{value} picometers"
-      long_name: Picometers
-      short: "{value}pm"
-      short_name: pm
-    NANO:
-      long:
-        one: "{value} nanometer"
-        other: "{value} nanometers"
-      long_name: Nanometers
-      short: "{value}nm"
-      short_name: nm
-    MICRO:
-      long:
-        one: "{value} micrometer"
-        other: "{value} micrometers"
-      long_name: Micrometers
-      short: "{value}µm"
-      short_name: µm
-    MILLI:
-      long:
-        one: "{value} millimeter"
-        other: "{value} millimeters"
-      long_name: Millimeters
-      short: "{value}mm"
-      short_name: mm
