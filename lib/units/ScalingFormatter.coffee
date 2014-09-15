@@ -17,6 +17,7 @@
 # }
 class Units.ScalingFormatter
 
+  @FEMTO: -5
   @PICO: -4
   @NANO: -3
   @MICRO: -2
@@ -31,6 +32,7 @@ class Units.ScalingFormatter
   @ZETTA: 7
   
   PREFIXES:
+    '-5': 'FEMTO'
     '-4': 'PICO'
     '-3': 'NANO'
     '-2': 'MICRO'
@@ -155,6 +157,7 @@ class Units.ScalingFormatter
   #
   # @param [Number] value the value being formatted
   computeIndex: (value) ->
+    return 0 if value == 0
     index = 0
     if value < 1
       (value = value * @multiplier; index--) while value < 1 and index > @minIndex

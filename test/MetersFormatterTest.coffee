@@ -5,6 +5,7 @@ exports.MetersFormatterTest =
 
   'test can format short': (test) ->
     formatter = new Units.MetersFormatter(TwitterCldr)
+    test.equal(formatter.formatShort(0), '0m')
     test.equal(formatter.formatShort(0.000000000001), '1pm')
     test.equal(formatter.formatShort(0.000000001), '1nm')
     test.equal(formatter.formatShort(0.000001), '1µm')

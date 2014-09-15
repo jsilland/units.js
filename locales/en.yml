@@ -57,6 +57,70 @@ en:
       long_name: Feet
       short: "{value}ft"
       short_name: ft
+  kilograms:
+    FEMTO:
+      long:
+        one: "{value} picogram"
+        other: "{value} picograms"
+      long_name: Picograms
+      short: "{value}pg"
+      short_name: pg
+    PICO:
+      long:
+        one: "{value} nanogram"
+        other: "{value} nanograms"
+      long_name: Nanograms
+      short: "{value}ng"
+      short_name: ng
+    NANO:
+      long:
+        one: "{value} microgram"
+        other: "{value} micrograms"
+      long_name: Micrograms
+      short: "{value}µg"
+      short_name: µg
+    MICRO:
+      long:
+        one: "{value} milligram"
+        other: "{value} milligrams"
+      long_name: Milligrams
+      short: "{value}mg"
+      short_name: mg
+    MILLI:
+      long:
+        one: "{value} gram"
+        other: "{value} grams"
+      long_name: Grams
+      short: "{value}g"
+      short_name: g
+    ONE:
+      long:
+        one: "{value} kilogram"
+        other: "{value} kilograms"
+      long_name: Kilograms
+      short: "{value}kg"
+      short_name: kg
+    KILO:
+      long:
+        one: "{value} ton"
+        other: "{value} tons"
+      long_name: Tons
+      short: "{value}t"
+      short_name: t
+    MEGA:
+      long:
+        one: "{value} Kiloton"
+        other: "{value} Kilotons"
+      long_name: Kilotons
+      short: "{value}kt"
+      short_name: kt
+    GIGA:
+      long:
+        one: "{value} Megaton"
+        other: "{value} Megatons"
+      long_name: Megatons
+      short: "{value}mt"
+      short_name: mt
   inches:
     ONE:
       long:
@@ -116,6 +180,22 @@ en:
       long_name: Millimeters
       short: "{value}mm"
       short_name: mm
+  ounces:
+    ONE:
+      long:
+        one: "{value} ounce"
+        other: "{value} ounces"
+      long_name: Ounces
+      short: "{value}oz"
+      short_name: oz
+  pounds:
+    ONE:
+      long:
+        one: "{value} pound"
+        other: "{value} pounds"
+      long_name: Pounds
+      short: "{value}lbs"
+      short_name: lbs
   power:
     ONE:
       long:
