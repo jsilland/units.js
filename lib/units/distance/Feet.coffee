@@ -1,6 +1,6 @@
-class Units.Feet extends Units.DistanceUnit
+class Units.Feet extends Units.DistanceUnit  
   FORMATTER: undefined
-  
+
   distanceMultiplier: ->
     3.28084
     

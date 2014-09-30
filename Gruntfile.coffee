@@ -50,6 +50,9 @@ module.exports = (grunt) ->
         'lib/units/mass/KilogramsFormatter.coffee'
         'lib/units/mass/OuncesFormatter.coffee'
         'lib/units/mass/PoundsFormatter.coffee'
+        'lib/units/temperature/CelsiusFormatter.coffee'
+        'lib/units/temperature/FahrenheitFormatter.coffee'
+        'lib/units/temperature/KelvinsFormatter.coffee'
         'lib/units/FormattableQuantity.coffee'
         'lib/units/distance/DistanceUnit.coffee'
         'lib/units/distance/Feet.coffee'
@@ -61,6 +64,10 @@ module.exports = (grunt) ->
         'lib/units/mass/Kilograms.coffee'
         'lib/units/mass/Ounces.coffee'
         'lib/units/mass/Pounds.coffee'
+        'lib/units/temperature/TemperatureUnit.coffee'
+        'lib/units/temperature/Celsius.coffee'
+        'lib/units/temperature/Fahrenheit.coffee'
+        'lib/units/temperature/Kelvins.coffee'
         'lib/expose.coffee'
       ].map(grunt.file.read).join(grunt.util.linefeed)
 

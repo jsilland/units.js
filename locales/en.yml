@@ -49,6 +49,22 @@ en:
       long_name: Exabytes
       short: "{value}EB"
       short_name: EB
+  celsius:
+    ONE:
+      long:
+        one: "{value} Celsius degree"
+        other: "{value} Celsius degrees"
+      long_name: Celsius degrees
+      short: "{value}℃"
+      short_name: ℃
+  fahrenheit:
+    ONE:
+      long:
+        one: "{value} Fahrenheit degree"
+        other: "{value} Fahrenheit degrees"
+      long_name: Fahrenheit degrees
+      short: "{value}℉"
+      short_name: ℉
   feet:
     ONE:
       long:
@@ -57,6 +73,14 @@ en:
       long_name: Feet
       short: "{value}ft"
       short_name: ft
+  kelvins:
+    ONE:
+      long:
+        one: "{value} Kelvin degree"
+        other: "{value} Kelvin degrees"
+      long_name: Kelvin degrees
+      short: "{value}K"
+      short_name: K
   kilograms:
     FEMTO:
       long:

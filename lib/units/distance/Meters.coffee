@@ -1,3 +1,4 @@
+# Represents a distance expressed in meters
 class Units.Meters extends Units.DistanceUnit
   FORMATTER: undefined
   
