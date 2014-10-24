@@ -1,6 +1,6 @@
 {
   "name": "units.js",
-  "description": "Javascript library for units conversion and formatting",
+  "description": "Javascript library for unit conversion and formatting",
   "version": "0.1.0",
   "homepage": "https://github.com/jsilland/units.js",
   "author": {
